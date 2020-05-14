@@ -1,0 +1,192 @@
+*{
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background-image: url(Images/wallpaper.jpg);
+}
+footer{
+    width: 100%;
+    background: rgba(179, 217, 255, 0.8);
+    border: 5px solid white;
+    margin-top: 2%;
+    padding: 2%;
+    text-align: center;
+    font-size: 7px;
+    position: absolute;
+}
+html{
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.nav{
+    top: 0;
+    border-bottom: 5px solid grey;
+    text-align: center;
+    height: 70px;
+    line-height: 30px;
+    background-color: rgba(179, 217, 255, 0.8);
+}
+
+.menu{
+    margin: 0 10px 0 0;
+}
+.menu a{
+    clear: right;
+    text-decoration: none;
+    color: gold;
+    margin: 0 10px;
+    line-height: 70px;
+    margin-right: 5%;
+    background: rgba(179, 217, 255, 0.8);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    
+}
+
+
+.menu a:hover{
+    background: white;
+    transition: 0.5s;
+    
+}
+
+#logo{
+    float: left;
+    left: -0px;
+    margin-left: 10%;
+    width: 10%;
+    height: 100%;
+}
+
+label{
+    margin: 0 40px 0 0;
+    font-size: 30px;
+    line-height: 60px;
+    display: block;
+    color: white;
+}
+
+
+#toggle{
+    display: none;
+}
+
+
+.wrapper{
+    margin-bottom: 2%;
+    width: 90%;
+    margin: auto;
+    background: none;
+    border: none;
+    overflow: hidden;
+}
+
+#myIMG{
+    width: 25%;
+    float: left;
+    margin: 2%;
+}
+.wrapper a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:  black;
+    text-decoration: underline;
+}
+.wrapper a:hover{
+    color: cyan;
+}
+#aboutMe{
+    width: 60%;
+    display: flex;
+    text-align: center;
+    font-size: 18px;
+    background: purple;
+    border: 2px solid black;
+    padding: 2%;
+    font-weight: bold;
+    margin-top: 5%
+    
+}
+.para{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    background: rgba(221, 238, 221, 0.8);
+    border: 1px solid white;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+table, tr, td{
+    padding: 2%;
+    text-align: center;
+    width: 90%;
+    background: rgb(200,200,200);
+    border: 0;
+    margin: 2% auto;
+}
+
+.section-title{
+    width: 95%;
+    margin: 2% auto;
+    text-align-last: center;
+    padding: 5px;
+    font-size: 24px;
+    background: rgba(221, 238, 221, 0.8);
+    border: 0;
+    
+}
+.coffee-menu{
+    background: rgb(60,60,60);
+    
+}
+@media only screen and (max-width: 800px){
+    label{
+        display:block;
+        cursor: pointer;
+        width: 26px;
+        float: right;
+        position: absolute;
+        right: 0px;
+    }
+    .nav{
+        text-align: center;
+    }
+    .menu{
+        text-align: center;
+        width: 100%:;
+        display: none;
+        top: -100;
+        position: sticky;
+    }
+    .menu{
+        margin: 0;
+        float: right;
+        clear: right;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .menu a{
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+        margin: 0;
+        text-align: center;
+    }
+    #toggle:checked + .menu{
+        display: block;
+    }
+}
