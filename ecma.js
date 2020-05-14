@@ -65,14 +65,14 @@ function AddMyOrder(){
     }
     
     
-    if ((validCheck1 == true && validCheck2 == true && validCheck3 == true)) {
+    if ((firstCheck1 == true && firstCheck2 == true && firstCheck3 == true)) {
             var itemSize = document.createTextNode(cupSize + " ");
-            my_order.appendChild(chosenSize);
+            my_order.appendChild(itemSize);
 
-            var itemName = document.createTextNode(drinkName + " ");
+            var chosenName = document.createTextNode(drinkName + " ");
             my_order.appendChild(chosenName);
 
-            var itemXtra = document.createTextNode(extraItem + " ");
+            var txtXtra = document.createTextNode(extraItem + " ");
             my_order.appendChild(txtXtra);
         
 
