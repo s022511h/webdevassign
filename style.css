@@ -1,188 +1,96 @@
-*{
-    font-style: italic;
-}
-html, body{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+* {
+    @apply italic;
+  }
+  html,
+  body {
+    @apply w-full h-full m-0;
+  }
+  body {
+    background: white;
+    font-family: 'Oxygen', sans-serif;
+    font-size: large;
+    font-weight: 600;
+  }
+  footer {
+    @apply w-full text-center text-[9px] absolute mt-[2%] p-[1%] border-[10px] border-solid border-[black];
+    background: rgba(136, 39, 136);
+  }
 
-body{
-    background: rgb(160,160,160)
-}
-footer{
-    width: 100%;
-    background: purple;
-    border: 10px solid black;
-    margin-top: 2%;
-    padding: 2%;
-    text-align: center;
-    font-size: 9px;
-    position: absolute;
-}
-html{
-    font-family: "helvetica neue", sans-serif;
-}
-
-.nav{
-    border-bottom: 1px solid white;
-    text-align: right;
-    height: 70px;
-    line-height: 70px;
-    background-color: black;
-}
-
-.menu{
-    margin: 0 30px 0 0;
-}
-.menu a{
-    clear: right;
-    text-decoration: none;
-    color: white;;
-    margin: 0 10px;
-    line-height: 70px;
-    margin-right: 5%;
+  .nav {
+    @apply text-right h-[73px] leading-[70px] bg-[black] border-b-[white] border-b border-solid w-[100%];
+  }
+  .menu {
+    @apply ml-0 mr-[10px] my-0 h-[80px];
+  }
+  .menu a {
+    @apply clear-right no-underline text-[white] leading-[70px] uppercase font-[bold] mr-[5%] mx-2.5 my-0 px-5 py-[27px] hover:transition-[0.5s] h-auto;
     background: black;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 27px;
-    padding-bottom: 27px;
-    text-transform: uppercase;
-    font-weight: bold;
-    
-}
-
-
-.menu a:hover{
-    background: purple;
-    transition: 0.5s;
-    
-}
-
-#logo{
-    float: left;
-    clear: left;
-    margin-left: 10%;
-    width: 40%;
-    height: 100%;
-}
-
-label{
-    margin: 0 40px 0 0;
-    font-size: 26px;
-    line-height: 70px;
-    display: none;
-    color: white;
-}
-
-
-#toggle{
-    display: none;
-}
-
-
-.wrapper{
-    margin-bottom: 2%;
-    width: 90%;
-    margin: auto;
-    background: rgb(120,120,120);
-    border: solid 3px cyan;
-    overflow: hidden;
-}
-
-#myIMG{
-    width: 25%;
-    float: left;
-    margin: 2%;
-}
-.wrapper a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color:  black;
-    text-decoration: underline;
-}
-.wrapper a:hover{
-    color: cyan;
-}
-#aboutMe{
-    width: 60%;
-    display: flex;
-    text-align: center;
-    font-size: 18px;
-    background: purple;
-    border: 2px solid black;
-    padding: 2%;
-    font-weight: bold;
-    margin-top: 5%
-    
-}
-.para{
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-    display: flex;
-    text-align: center;
-    background: purple;
-    border: 2px solid black;
-    padding: 2%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-table, tr, td{
-    padding: 2%;
-    text-align: center;
-    width: 90%;
-    background: rgb(200,200,200);
-    border: 1px solid black;
-    margin: 2% auto;
-}
-
-.section-title{
-    width: 95%;
-    margin: 2% auto;
+  }
+  .menu a:hover {
+    background: rgb(178, 63, 178, 0.8);
+  }
+  #logo {
+    @apply float-left w-[5%] h-[70px] ml-[10%];
+  }
+  label {
+    @apply text-[26px] leading-[70px] hidden text-[white] ml-0 mr-10 my-0;
+  }
+  #toggle {
+    @apply hidden;
+  }
+  .wrapper {
+    @apply w-[90%] overflow-hidden mb-[2%] m-auto border-[solid] border-[cyan];
+    background:white;
+  }
+  #myIMG {
+    @apply w-3/12 float-left m-[2%];
+  }
+  .wrapper a {
+    @apply no-underline uppercase text-[black] hover:text-[cyan];
+  }
+  #aboutMe {
+    @apply w-3/5 flex text-center text-lg font-[bold] mt-[5%] p-[2%] rounded-sm border-2 border-solid border-[black];
+    background: rgb(178, 63, 178, 0.8);
+    font-family: 'Oxygen', sans-serif;
+  }
+  .para {
+    @apply w-[90%] overflow-hidden flex text-center my-[2%] m-auto p-[2%] rounded-sm border-2 border-solid border-[black];
+    background: white;
+  }
+  table,
+  tr,
+  td {
+    @apply text-center w-[90%] border mx-auto my-[2%] p-[2%] border-solid border-[black];
+    background: rgb(200, 200, 200);
+  }
+  .section-title {
+    @apply w-[95%] text-2xl mx-auto my-[2%] p-[2%] border-2 border-solid border-[black];
     text-align-last: center;
-    padding: 2%;
-    font-size: 24px;
     background: purple;
-    border: 2px solid black;
-    
-}
-.coffee-menu{
-    background: rgb(60,60,60);
-    
-}
-@media only screen and (max-width: 800px){
-    label{
-        display: block;
-        cursor: pointer;
-        width: 26px;
-        float: right;
+  }
+  .coffee-menu {
+    background: rgb(60, 60, 60);
+  }
+  @media only screen and (max-width: 800px) {
+    label {
+      @apply block cursor-pointer w-[26px] float-right;
     }
-    .nav{
-        text-align: center;
+    .nav {
+      @apply text-center;
     }
-    .menu{
-        text-align: center;
-        width: 100%:;
-        display: none;
+    .menu {
+      @apply text-center w-full hidden float-right clear-right w-full mb-[5%] m-0;
     }
-    .menu{
-        margin: 0;
-        float: right;
-        clear: right;
-        width: 100%;
-        margin-bottom: 5%;
+    .menu a {
+      @apply block w-full text-center m-0 border-y-[white] border-b border-solid border-t;
     }
-    .menu a{
-        display: block;
-        width: 100%;
-        border-bottom: 1px solid white;
-        border-top: 1px solid white;
-        margin: 0;
-        text-align: center;
+    #toggle:checked + .menu {
+      @apply block;
     }
-    #toggle:checked + .menu{
-        display: block;
-    }
-}
+  }
